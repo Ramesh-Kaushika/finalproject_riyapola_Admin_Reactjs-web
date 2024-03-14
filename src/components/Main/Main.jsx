@@ -23,6 +23,8 @@ import routes from "../../common/Navigation/routes.jsx";
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import PageviewIcon from '@mui/icons-material/Pageview';
 import VisibilityIcon from '@mui/icons-material/Visibility';
+import LogoutIcon from '@mui/icons-material/Logout';
+import Button from "@mui/material/Button";
 
 
 
@@ -117,7 +119,7 @@ export default function MiniDrawer() {
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
             <AppBar position="fixed" open={open}>
-                <Toolbar>
+                <Toolbar sx={{backgroundColor: '#d63031'}}>
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
@@ -133,6 +135,9 @@ export default function MiniDrawer() {
                     <Typography variant="h6" noWrap component="div">
                        Admin DashBoard
                     </Typography>
+                    <Button  onClick={()=> logoutonclick()} variant="contained" sx={{marginLeft: '950px',backgroundColor: '#1e272e',color: 'balck'}} endIcon={<LogoutIcon />}>
+                        LOG OUT
+                    </Button>
                 </Toolbar>
             </AppBar>
             <Drawer variant="permanent" open={open}>
@@ -144,7 +149,7 @@ export default function MiniDrawer() {
                 <Divider />
                 <List>
                     {routes.map((val, index) => (
-                        <Link key={val.key} to={val.path}>
+                        <Link style={{textDecoration: 'none',color: '#2d3436'}} key={val.key} to={val.path}>
                             <ListItem key={val.key} disablePadding sx={{ display: 'block' }}>
                                 <ListItemButton
                                     sx={{
