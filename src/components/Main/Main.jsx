@@ -25,6 +25,7 @@ import PageviewIcon from '@mui/icons-material/Pageview';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import LogoutIcon from '@mui/icons-material/Logout';
 import Button from "@mui/material/Button";
+import DashboardIcon from '@mui/icons-material/Dashboard';
 
 
 
@@ -165,9 +166,10 @@ export default function MiniDrawer() {
                                             justifyContent: 'center',
                                         }}
                                     >
-                                        {index === 0 && <ShoppingCartIcon/>}
-                                        {index === 1 && <PageviewIcon/>}
-                                        {index === 2 && <VisibilityIcon />}
+                                        {index === 0 && <DashboardIcon/>}
+                                        {index === 1 && <ShoppingCartIcon/>}
+                                        {index === 2 && <PageviewIcon/>}
+                                        {index === 3 && <VisibilityIcon />}
                                     </ListItemIcon>
                                     <ListItemText primary={val.key} sx={{ opacity: open ? 1 : 0 }} />
                                 </ListItemButton>
