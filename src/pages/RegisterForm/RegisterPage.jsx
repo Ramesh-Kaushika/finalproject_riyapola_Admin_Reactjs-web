@@ -1,86 +1,65 @@
 import * as React from 'react';
-
+import './RegisterStyle.css'
 import TextField from '@mui/material/TextField';
+import Box from "@mui/material/Box";
+import {Typography} from "@mui/material";
+import {ButtonCom, ButtonCom2} from "../../components/ButtonCom/ButtonCom.jsx";
 
 export default function RegisterPage() {
     return (
-        <div
-            component="form"
-            sx={{
-                '& .MuiTextField-root': { m: 1, width: '25ch' },
-            }}
-            noValidate
-            autoComplete="off"
-        >
-            <div>
-                <TextField
-                    id="outlined-multiline-flexible"
-                    label="Multiline"
-                    multiline
-                    maxRows={4}
-                />
-                <TextField
-                    id="outlined-textarea"
-                    label="Multiline Placeholder"
-                    placeholder="Placeholder"
-                    multiline
-                />
-                <TextField
-                    id="outlined-multiline-static"
-                    label="Multiline"
-                    multiline
-                    rows={4}
-                    defaultValue="Default Value"
-                />
-            </div>
-            <div>
-                <TextField
-                    id="filled-multiline-flexible"
-                    label="Multiline"
-                    multiline
-                    maxRows={4}
-                    variant="filled"
-                />
-                <TextField
-                    id="filled-textarea"
-                    label="Multiline Placeholder"
-                    placeholder="Placeholder"
-                    multiline
-                    variant="filled"
-                />
-                <TextField
-                    id="filled-multiline-static"
-                    label="Multiline"
-                    multiline
-                    rows={4}
-                    defaultValue="Default Value"
-                    variant="filled"
-                />
-            </div>
-            <div>
-                <TextField
-                    id="standard-multiline-flexible"
-                    label="Multiline"
-                    multiline
-                    maxRows={4}
-                    variant="standard"
-                />
-                <TextField
-                    id="standard-textarea"
-                    label="Multiline Placeholder"
-                    placeholder="Placeholder"
-                    multiline
-                    variant="standard"
-                />
-                <TextField
-                    id="standard-multiline-static"
-                    label="Multiline"
-                    multiline
-                    rows={4}
-                    defaultValue="Default Value"
-                    variant="standard"
-                />
+        <div className={'main-img'}>
+            <div className={'reg-container'}>
+                <Box
+                    component="form"
+                    sx={{
+                        '& .MuiTextField-root': { m: 1, width: '25ch' },
+                    }}
+                    noValidate
+                    autoComplete="off"
+                >
+                    <div>
+                        <Typography fontFamily={'-apple-system'}
+                                    variant="poster"
+                                    fontSize={30}
+                                    fontWeight={'bold'}
+                                    fontStyle={{color: 'black'}}
+                        >Riyapola Admin Register      Form</Typography>
+                    </div>
+                    <br/><br/><br/>
+                    <div className={'text-mod'}>
+                        <TextField
+                            id="standard-textarea"
+                            label="E-mail"
+                            placeholder="Enter E-mail"
+                            multiline
+                            variant="standard"
+                        />
+                        <br/><br/>
+                        <TextField
+                            id="standard-textarea"
+                            label="User Name"
+                            placeholder="Enter User Name"
+                            multiline
+                            variant="standard"
+                        />
+                        <br/><br/>
+                        <TextField
+                            id="standard-textarea"
+                            label="Password"
+                            placeholder="Enter Password"
+                            multiline
+                            variant="standard"
+                        />
+
+                    </div>
+                </Box>
+                <br/><br/>
+                <div>
+                    <ButtonCom2/>
+                </div>
             </div>
         </div>
+
+
     );
 }

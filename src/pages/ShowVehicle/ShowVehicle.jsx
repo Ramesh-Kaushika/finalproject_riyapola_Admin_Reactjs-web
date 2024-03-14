@@ -1,6 +1,6 @@
 export default function ShowVehicle() {
     return(
-        <h1>Hello</h1>
+            <h1>Show Vehicle</h1>
     )
 
 }

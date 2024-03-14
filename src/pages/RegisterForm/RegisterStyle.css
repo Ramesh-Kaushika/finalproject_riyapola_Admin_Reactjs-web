@@ -1,11 +1,12 @@
 .reg-container{
-    background: transparent;
+    background-color: #ecf0f1 ;
     border: 2px solid rgba(255,255,255,.2);
     backdrop-filter: blur(30px);
     box-shadow: 0 0 10px rgba(0,0,0,.2);
     width: 400px;
     height: 650px;
     margin-top: 40px;
+    margin-left: 35%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,4 +19,18 @@
     display: flex;
     justify-content: center;
     height: 100vh;
+}
+.text-mod{
+    flex-direction: column;
+    display: flex;
+
+
+}
+
+.main-img{
+background-image: url("src/assets/Login/cars2.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

@@ -2,7 +2,7 @@ import * as React from 'react';
 import HelperTextAligned from "../../components/TextFields/TextField.jsx";
 import BasicButtons, {ButtonCom} from "../../components/ButtonCom/ButtonCom.jsx";
 import BadgeAvatars from "../../components/AvatarCom/AvatarCom.jsx";
-import Link from '@mui/joy/Link';
+import Link from '@mui/material/Link';
 import {Typography} from "@mui/material";
 import './Login.css'
 
@@ -24,14 +24,14 @@ export default function Login() {
                                 fontWeight={'bold'}
                     >Riyapola Admin Login:</Typography>
                     <br/><br/>
-                    {/*<BadgeAvatars/>*/}
-                    {/*<HelperTextAligned/>*/}
-                    {/*<br/>*/}
-                    {/*<BasicButtons/>*/}
-                    {/*<br/>*/}
-                    {/*<Link fontStyle={{color: 'black'}} fontSize={12} href="https://www.youtube.com/">Forget Password ?</Link>*/}
-                    {/*<br/>*/}
-                    {/*<ButtonCom/>*/}
+                    <BadgeAvatars/>
+                    <HelperTextAligned/>
+                    <br/>
+                    <BasicButtons/>
+                    <br/>
+                    <Link fontStyle={{color: 'black'}} fontSize={12} href="https://www.youtube.com/">Forget Password ?</Link>
+                    <br/>
+                    <ButtonCom/>
                 </div>
             </div>
         </div>

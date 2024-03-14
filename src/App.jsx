@@ -1,19 +1,24 @@
 
 import './App.css'
-// import Login from "./pages/Login/Login.jsx";
+
 import RegisterPage from "./pages/RegisterForm/RegisterPage.jsx";
+import Login from "./pages/Login/Login.jsx";
+import Main from "./components/Main/Main.jsx";
 
 function App() {
 
 
   return (
 
-      <div>
-        <h1>hello</h1>
-        <RegisterPage/>
+<>
+    <Main/> {/*<h1>hello</h1>*/}
+    {/*<RegisterPage/>*/}
+    {/*<Login/>*/}
+</>
 
-      </div>
-      // <Login/>
+
+
+
 
   )
 }
