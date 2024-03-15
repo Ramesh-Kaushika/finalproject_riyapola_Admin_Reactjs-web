@@ -25,10 +25,10 @@ export function ButtonCom() {
     );
 }
 
-export function ButtonCom2() {
+export function ButtonCom2({onclick}) {
     return (
 
-        <Button  sx={{ width: 120, height: 30,fontSize: 18,fontFamily: '"Segoe UI Symbol"',}} variant="contained" color="success">
+        <Button onClick={onclick}  sx={{ width: 120, height: 30,fontSize: 18,fontFamily: '"Segoe UI Symbol"',}} variant="contained" color="success">
             SIGN UP
         </Button>
 

@@ -11,9 +11,9 @@ function App() {
   return (
 
 <>
-    <Main/> {/*<h1>hello</h1>*/}
+    {/*<Main/> */}
     {/*<RegisterPage/>*/}
-    {/*<Login/>*/}
+    <Login/>
 </>
 
 

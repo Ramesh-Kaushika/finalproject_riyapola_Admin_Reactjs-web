@@ -4,7 +4,9 @@ import axios from "axios";
 const token = localStorage.getItem('stToken')
 
 const instance = axios.create({
-    baseURL: 'https://some-domain.com/api/',
+    baseURL: 'http://localhost:8080',
    // timeout: 1000,
     headers: {Authorization: `Bearer ${token}`}
 });
+
+export default instance;
