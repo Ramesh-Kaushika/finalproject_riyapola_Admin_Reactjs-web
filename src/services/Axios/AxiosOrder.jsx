@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-const token = localStorage.getItem('stToken')
+    const token = localStorage.getItem('stToken')
 
 const instance = axios.create({
     baseURL: 'http://localhost:8080',

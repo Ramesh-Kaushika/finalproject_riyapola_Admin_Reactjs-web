@@ -6,6 +6,7 @@ import {Typography} from "@mui/material";
 import {useState} from "react";
 import instance from "../../services/Axios/AxiosOrder.jsx";
 import {ButtonCom2} from "../../components/ButtonCom/ButtonCom.jsx";
+import {Link} from "react-router-dom";
 
 
 
@@ -97,7 +98,10 @@ export default function RegisterPage() {
                 </Box>
                 <br/><br/>
                 <div>
-                    <ButtonCom2 onclick={() => registerHandle()}/>
+                    <Link to={'/login'}>
+                        <ButtonCom2 onclick={() => registerHandle()}/>
+                    </Link>
+
 
                 </div>
             </div>

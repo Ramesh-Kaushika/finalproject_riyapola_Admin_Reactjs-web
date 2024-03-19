@@ -116,6 +116,10 @@ export default function MiniDrawer() {
         setOpen(false);
     };
 
+    const logoutonclick = () => {
+        localStorage.removeItem('stToken')
+        window.location.reload();
+    }
     return (
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
@@ -185,7 +189,7 @@ export default function MiniDrawer() {
                 <Box>
                     <Routes>
                         {getRoutes(routes)}
-                        <Route path={'*'} element={<Navigate to={'/addvehicle'}/>}/>
+                        <Route path={'*'} element={<Navigate to={'/dashboard'}/>}/>
                     </Routes>
                 </Box>
 
