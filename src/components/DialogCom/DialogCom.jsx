@@ -9,6 +9,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import AddIcon from "@mui/icons-material/Add.js";
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import {styled} from "@mui/material/styles";
+import {useState} from "react";
 
 const VisuallyHiddenInput = styled('input')({
     clip: 'rect(0 0 0 0)',
@@ -22,8 +23,9 @@ const VisuallyHiddenInput = styled('input')({
     width: 1,
 });
 
-export default function DialogCom() {
-    const [open, setOpen] = React.useState(false);
+export default function DialogCom({open,uploadImage,onchangeUploadFile,onclick,onchangeBrand,onchangeModel,onchangeVehicleNo,onchangePrice,onchangeDescription}) {
+
+
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -58,6 +60,7 @@ export default function DialogCom() {
                         will send updates occasionally.
                     </DialogContentText>
                     <TextField
+                        onChange={onchangeBrand}
                         autoFocus
                         required
                         margin="dense"
@@ -70,6 +73,7 @@ export default function DialogCom() {
                     />
                     <br/>
                     <TextField
+                        onChange={onchangeModel}
                         autoFocus
                         required
                         margin="dense"
@@ -82,6 +86,7 @@ export default function DialogCom() {
                     />
                     <br/>
                     <TextField
+                        onChange={onchangeVehicleNo}
                         autoFocus
                         required
                         margin="dense"
@@ -94,6 +99,7 @@ export default function DialogCom() {
                     />
                     <br/>
                     <TextField
+                        onChange={onchangePrice}
                         autoFocus
                         required
                         margin="dense"
@@ -104,6 +110,124 @@ export default function DialogCom() {
                     />
                     <br/>
                     <TextField
+                        onChange={onchangeDescription}
+                        autoFocus
+                        required
+                        margin="dense"
+                        name="Description"
+                        label="Description"
+                        fullWidth
+                        variant="standard"
+                    />
+                    <br/><br/>
+                            <Button
+                                component="label"
+                                role={undefined}
+                                variant="contained"
+                                tabIndex={-1}
+                                startIcon={<CloudUploadIcon />}
+                            >
+                                Upload file
+                                <VisuallyHiddenInput type="file"
+                                  onChange={onchangeUploadFile}
+
+                                />
+
+                            </Button>
+
+                        <img src={uploadImage} width={200} height={200}/>
+
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={handleClose}>Cancel</Button>
+                    <Button onClick={onclick} type="submit">DONE</Button>
+                </DialogActions>
+            </Dialog>
+        </React.Fragment>
+    );
+}
+
+export function DialogCom4({handleClose,open,uploadImage,onchangeUploadFile,onclick,onchangeBrand,onchangeModel,onchangeVehicleNo,onchangePrice,onchangeDescription}) {
+
+
+
+
+    return (
+        <React.Fragment>
+
+            <Dialog
+                open={open}
+                onClose={handleClose}
+                PaperProps={{
+                    component: 'form',
+                    onSubmit: (event) => {
+                        event.preventDefault();
+                        const formData = new FormData(event.currentTarget);
+                        const formJson = Object.fromEntries(formData.entries());
+                        const email = formJson.email;
+                        console.log(email);
+                        handleClose();
+                    },
+                }}
+            >
+                <DialogTitle sx={{fontWeight: 'bold '}}>Vehicle Adding Form</DialogTitle>
+                <DialogContent>
+                    <DialogContentText>
+                        To adding form to this website, please enter information here. We
+                        will send updates occasionally.
+                    </DialogContentText>
+                    <TextField
+                        onChange={onchangeBrand}
+                        autoFocus
+                        required
+                        margin="dense"
+                        // id="name"
+                        name="Brand"
+                        label="Brand"
+                        // type="email"
+                        fullWidth
+                        variant="standard"
+                    />
+                    <br/>
+                    <TextField
+                        onChange={onchangeModel}
+                        autoFocus
+                        required
+                        margin="dense"
+                        // id="name"
+                        name="Model"
+                        label="Model"
+                        // type="email"
+                        fullWidth
+                        variant="standard"
+                    />
+                    <br/>
+                    <TextField
+                        onChange={onchangeVehicleNo}
+                        autoFocus
+                        required
+                        margin="dense"
+                        // id="name"
+                        name="Vehicle Number"
+                        label="Vehicle Number"
+                        // type="email"
+                        fullWidth
+                        variant="standard"
+                    />
+                    <br/>
+                    <TextField
+                        onChange={onchangePrice}
+                        autoFocus
+                        required
+                        margin="dense"
+                        name="Price"
+                        label="Price"
+                        fullWidth
+                        variant="standard"
+                    />
+                    <br/>
+                    <TextField
+                        onChange={onchangeDescription}
                         autoFocus
                         required
                         margin="dense"
@@ -121,15 +245,22 @@ export default function DialogCom() {
                         startIcon={<CloudUploadIcon />}
                     >
                         Upload file
-                        <VisuallyHiddenInput type="file" />
+                        <VisuallyHiddenInput type="file"
+                                             onChange={onchangeUploadFile}
+
+                        />
+
                     </Button>
+
+                    <img src={uploadImage} width={200} height={200}/>
 
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleClose}>Cancel</Button>
-                    <Button type="submit">DONE</Button>
+                    <Button onClick={onclick} type="submit">DONE</Button>
                 </DialogActions>
             </Dialog>
         </React.Fragment>
     );
 }
+

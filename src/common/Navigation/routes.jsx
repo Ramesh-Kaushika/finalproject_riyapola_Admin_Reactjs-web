@@ -1,6 +1,7 @@
 import AddVehicle from "../../pages/AddVehicle/AddVehicle.jsx";
 import SearchVehicle from "../../pages/SearchVehicle/SearchVehicle.jsx";
 import ShowVehicle from "../../pages/ShowVehicle/ShowVehicle.jsx";
+import AdminData from "../AdminData/AdminData.jsx";
 import DashBoard from "../../pages/DashBoard/DashBoard.jsx";
 
 

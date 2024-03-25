@@ -140,7 +140,7 @@ export default function MiniDrawer() {
                     <Typography variant="h6" noWrap component="div">
                        Admin DashBoard
                     </Typography>
-                    <Button  onClick={()=> logoutonclick()} variant="contained" sx={{marginLeft: '950px',backgroundColor: '#1e272e',color: 'balck'}} endIcon={<LogoutIcon />}>
+                    <Button  onClick={()=> logoutonclick()} variant="contained" sx={{marginLeft:120, backgroundColor: '#1e272e',color: 'balck'}} endIcon={<LogoutIcon />}>
                         LOG OUT
                     </Button>
                 </Toolbar>
@@ -184,7 +184,7 @@ export default function MiniDrawer() {
                 </List>
 
             </Drawer>
-            <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+            <Box component="main" sx={{  width: '100%', p: 3 }}>
                 <DrawerHeader />
                 <Box>
                     <Routes>
